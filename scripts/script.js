@@ -9,7 +9,12 @@ async function carregarValoresGit(){
         const texto = await response.text();
         const valores = texto
             .split('\n')
-            .map(valor => parseFloat(valor))
+            .map(valor => {
+                if (valor.includes(',')){
+                    return parseFloat(valor.replace(',', '.'));
+                }
+                return parseFloat(valor);
+            })
             .filter(Number.isFinite);
         return valores;
     }
@@ -25,7 +30,7 @@ async function verQuantoDeve(){
     const total = valores.reduce((soma, valor) => soma + valor, 0);
     
     const txt1 = document.getElementById("money");
-    txt1.textContent = `R$${total}`;
+    txt1.textContent = `R$${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     const txt2 = document.getElementById("moneySub");
 
     txt1.style.visibility = "visible";
