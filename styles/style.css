@@ -8,6 +8,10 @@
 }
 body{
     font-family: "Roboto", sans-serif;
+    background-image: url('https://raw.githubusercontent.com/Guspyy/quantoDeve/refs/heads/main/images/kroi.png');
+    background-size: 500px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
     background-color: #845ec2;
     height: 100vh;
     justify-content: center;
@@ -68,4 +72,11 @@ body{
 .title-money{
     color: lime;
     visibility: hidden;
+}
+
+
+.penguino{
+    display: flex;
+    align-items: end;
+    margin-left: 1000px;
 }
