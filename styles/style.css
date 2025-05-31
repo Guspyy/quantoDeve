@@ -8,7 +8,7 @@
 }
 body{
     font-family: "Roboto", sans-serif;
-    background-image: url('https://raw.githubusercontent.com/Guspyy/quantoDeve/refs/heads/main/images/kroi.png');
+    background-image: url('/images/kroi.png');
     background-size: 50vh;
     background-position: bottom right;
     background-repeat: no-repeat;
